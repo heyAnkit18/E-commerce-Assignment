@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "image": "https://via.placeholder.com/150",
+        "name": "Product 1",
+        "description": "This is a description of Product 1.",
+        "price": 100,
+        "rating": 4.5,
+        "sizes": { "S": 5, "M": 10, "L": 15 }
+    },
+    {
+        "id": 2,
+        "image": "https://via.placeholder.com/150",
+        "name": "Product 2",
+        "description": "This is a description of Product 2.",
+        "price": 150,
+        "rating": 4.0,
+        "sizes": { "S": 3, "M": 8, "L": 12 }
+    }
+]
