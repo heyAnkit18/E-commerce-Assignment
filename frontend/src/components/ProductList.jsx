@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react';
 
 const ProductList = () => {
-    const [products, setProducts] = useState([]); // State for products
-    const [loading, setLoading] = useState(true); // State for loading
+    const [products, setProducts] = useState([]); 
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
-        // Fetch products from the backend
+        
         fetch('http://localhost:5000/products')
             .then((response) => response.json())
             .then((data) => {
                 if (data.success) {
-                    setProducts(data.data); // Set products from response
+                    setProducts(data.data); 
                 } else {
                     console.error('Failed to fetch products');
                 }
-                setLoading(false); // Stop loading
+                setLoading(false); 
             })
             .catch((error) => {
                 console.error('Error fetching products:', error);
-                setLoading(false); // Stop loading on error
+                setLoading(false); 
             });
     }, []);
 
     if (loading) {
-        return <div>Loading products...</div>; // Show loading message
+        return <div>Loading products...</div>; 
     }
 
     return (
